@@ -1,0 +1,186 @@
+/* ============= GENERAL STYLES ============= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Checkout Container */
+.checkout-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkout Title */
+.checkout-container h1 {
+    text-align: center;
+    color: #ff66b2;
+    font-size: 28px;
+}
+
+/* Product Summary */
+.product-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-summary img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h2 {
+    color: #ff66b2;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff66b2;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Checkout Form */
+.checkout-form {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form h2 {
+    color: #ff66b2;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Form Inputs */
+.checkout-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #444;
+}
+
+.checkout-form textarea,
+.checkout-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #ff66b2;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #ff3385;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-summary {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ============= USER NAVBAR ============= */
+.navbar {
+    background-color: #ff66b2;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* ============= FOOTER ============= */
+.footer {
+    background-color: #ff66b2;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    margin-top: auto;
+}

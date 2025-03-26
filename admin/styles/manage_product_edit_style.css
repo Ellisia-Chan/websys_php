@@ -1,0 +1,195 @@
+/* ============= GENERAL EDIT PRODUCT STYLES ============= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ============= ADMIN NAVBAR ============= */
+.navbar {
+    background-color: #ff66b2;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Admin Logo */
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* ============= ADMIN CONTAINER ============= */
+.admin-container {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 12px;
+    width: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= FORM STYLING ============= */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff66b2;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 102, 178, 0.3);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* ============= IMAGE PREVIEW ============= */
+.product-preview {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= BUTTONS ============= */
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: #ff66b2;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #ff3385;
+}
+
+.secondary-btn {
+    background-color: #6c757d;
+    color: white;
+    margin-left: 10px;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+/* ============= SUCCESS & ERROR MESSAGES ============= */
+.message-container {
+    text-align: center;
+    margin: 10px auto;
+    width: 60%;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
+    text-align: center;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+}
+
+/* ============= RESPONSIVE DESIGN ============= */
+@media (max-width: 768px) {
+    .admin-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .product-preview {
+        max-width: 250px;
+    }
+
+    .message-container {
+        width: 90%;
+    }
+}

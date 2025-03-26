@@ -1,0 +1,287 @@
+/* ============= GENERAL USER STYLES ============= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ============= PRODUCT PAGE CONTAINER ============= */
+.product-page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= PRODUCT DETAILS SECTION ============= */
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Product Image */
+.product-details img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Information */
+.product-info {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.product-info h1 {
+    font-size: 32px;
+    color: #ff66b2;
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.product-price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff66b2;
+    margin-bottom: 25px;
+}
+
+/* Buy Button */
+.buy-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff66b2;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: #ff3385;
+    transform: scale(1.05);
+}
+
+/* ============= REVIEWS SECTION ============= */
+.reviews {
+    margin-top: 50px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reviews h2 {
+    text-align: center;
+    color: #ff66b2;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Review Card */
+.review {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fbe3ee;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+}
+
+.review img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-content {
+    flex: 1;
+    font-size: 16px;
+}
+
+/* ============= RELATED PRODUCTS ============= */
+.related-products {
+    margin-top: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.related-products h2 {
+    color: #ff66b2;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Related Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Related Product Card */
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #ff66b2;
+    font-weight: bold;
+}
+
+/* View Details Button */
+.product-card .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff66b2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.product-card .btn:hover {
+    background-color: #ff3385;
+    transform: scale(1.05);
+}
+
+/* No Products Message */
+.no-products {
+    text-align: center;
+    font-size: 20px;
+    color: #ff66b2;
+    font-weight: bold;
+    padding: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* ============= USER NAVBAR ============= */
+.navbar {
+    background-color: #ff66b2;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* ============= FOOTER ============= */
+.footer {
+    background-color: #ff66b2;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    margin-top: auto;
+}

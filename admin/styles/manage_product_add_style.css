@@ -1,0 +1,172 @@
+/* ============= GENERAL ADMIN PRODUCT ADD PAGE STYLES ============= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ============= ADMIN NAVBAR ============= */
+.navbar {
+    background-color: #ff66b2;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Admin Logo */
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+
+/* ============= ADMIN CONTAINER ============= */
+.admin-container {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= FORM STYLING ============= */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Submit Button */
+.form-container button {
+    width: 95%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #ff66b2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #ff3385;
+}
+
+/* ============= SUCCESS & ERROR MESSAGE ============= */
+.message-container {
+    text-align: center;
+    margin: 15px auto;
+    padding: 10px;
+    max-width: 500px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
+    max-width: 500px;
+    margin: auto;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #f5c6cb;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* ============= BACK TO PRODUCTS BUTTON ============= */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff66b2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #ff3385;
+}
+
+/* Back Button */
+.btn.back-btn {
+    background-color: #d9534f;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+    padding: 12px 20px;
+}
+
+.btn.back-btn:hover {
+    background-color: #c9302c;
+}

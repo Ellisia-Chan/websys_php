@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ============= FIXED NAVBAR WITH LOGO & RIGHT-ALIGNED LINKS ============= */
+.navbar {
+    background-color: #ff66b2;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styling */
+.navbar .logo img {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .logo img {
+        height: 40px; /* Smaller logo for mobile */
+    }
+
+    .navbar .nav-links {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Hero Banner */
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Sections */
+.welcome, .about, .featured-products, .reviews, .contact {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+    background-color: #ffccde;
+}
+
+.about img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Featured Products */
+.featured-products .product {
+    display: inline-block;
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.featured-products .product img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Customer Reviews */
+.reviews {
+    background-color: #ffb3d9;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px auto;
+    text-align: left;
+    max-width: 600px;
+}
+
+.review img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ff99cc;
+    color: white;
+}
+
+.contact img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: #ff66b2;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    margin-top: auto;
+}
+
+/* ============= LOGIN & SIGNUP FORM STYLING ============= */
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form Title */
+.form-container h2 {
+    color: #ff66b2;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.form-container input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Buttons */
+.form-container button {
+    width: 95%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #ff66b2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #ff3385;
+}
+
+/* Links */
+.form-container p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.form-container a {
+    color: #ff66b2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* ============= SUCCESS & ERROR MESSAGES ============= */
+
+/* Success Notification */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
+}
+
+/* Error Notification */
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border: 1px solid #f5c6cb;
+}
