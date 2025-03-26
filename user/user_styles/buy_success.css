@@ -1,0 +1,178 @@
+/* ============= GENERAL STYLES ============= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ✅ Main Wrapper to Keep Navbar, Content, and Footer Structured */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Expands to fill space between navbar & footer */
+}
+
+/* ✅ Success Container - Centered & Professional */
+.success-container {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: auto; /* Centers vertically */
+}
+
+/* ✅ Success Message */
+.success-container h1 {
+    color: #ff66b2;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.success-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ✅ Order Summary - Well Spaced */
+.order-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    justify-content: center;
+    text-align: left;
+}
+
+.order-summary img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10px;
+}
+
+.order-info {
+    flex: 1;
+}
+
+.order-info h2 {
+    color: #ff66b2;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.order-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #444;
+}
+
+/* ✅ Buttons - Perfectly Centered */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ✅ Buttons - Modern Look */
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #ff66b2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff3385;
+    transform: scale(1.05);
+}
+
+/* ✅ Back Button */
+.back-btn {
+    background-color: #555;
+}
+
+.back-btn:hover {
+    background-color: #333;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .order-summary {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ============= NAVBAR & FOOTER (Consistent with the Rest) ============= */
+.navbar {
+    background-color: #ff66b2;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* ✅ Footer Fixed to Bottom */
+.footer {
+    background-color: #ff66b2;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    margin-top: auto;
+}
