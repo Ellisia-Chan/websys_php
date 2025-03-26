@@ -1,0 +1,156 @@
+/* ============= GENERAL ADMIN STYLES ============= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2;
+    color: #333;
+}
+
+/* Admin Container */
+.admin-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.admin-container h1 {
+    text-align: center;
+    color: #ff66b2;
+    font-size: 28px;
+}
+
+/* Orders Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #ff66b2;
+    color: white;
+    font-size: 16px;
+}
+
+.no-orders {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    color: #ff66b2;
+}
+
+/* Order Image */
+.order-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .order-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ============= ADMIN NAVBAR ============= */
+.navbar {
+    background-color: #ff66b2;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Admin Logo */
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* ============= SUCCESS & ERROR MESSAGES ============= */
+.message {
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

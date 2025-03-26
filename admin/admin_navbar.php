@@ -12,7 +12,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="index.php">Dashboard</a></li>
         <li><a href="manage_users.php">Users</a></li>
         <li><a href="manage_product.php">Products</a></li>
-        <li><a href="#">Orders</a></li>
+        <li><a href="manage_orders.php">Orders</a></li>
         <li><a href="../logout.php">Logout</a></li>
     </ul>
 </div>
