@@ -4,7 +4,7 @@ session_start();
 
 // Redirect if no product ID is provided
 if (!isset($_GET['id']) || empty($_GET['id'])) {
-    header("Location: index.php"); 
+    header("Location: index.php");
     exit();
 }
 
@@ -23,6 +23,13 @@ if ($result->num_rows == 0) {
 }
 
 $product = $result->fetch_assoc();
+
+// Handle errors
+$error_message = "";
+if (isset($_SESSION["error_message"])) {
+    $error_message = $_SESSION["error_message"];
+    unset($_SESSION["error_message"]); // Clear message after displaying
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,14 +47,17 @@ $product = $result->fetch_assoc();
     <div class="checkout-container">
         <h1>Checkout</h1>
 
+        <!-- Error Message Display -->
+        <?php if (!empty($error_message)) : ?>
+            <div class="message-container error"><?php echo $error_message; ?></div>
+        <?php endif; ?>
+
         <!-- Product Details -->
         <div class="product-summary">
             <img src="../uploads/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
             <div class="product-info">
                 <h2><?php echo htmlspecialchars($product['name']); ?></h2>
                 <p class="price">$<?php echo number_format($product['price'], 2); ?></p>
-                <label>Quantity:</label>
-                <input type="number" id="quantity" value="1" min="1">
                 <p class="total-price">Total: $<span id="total"><?php echo number_format($product['price'], 2); ?></span></p>
             </div>
         </div>
@@ -58,6 +68,18 @@ $product = $result->fetch_assoc();
             <form action="process_order.php" method="POST">
                 <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
                 <input type="hidden" name="price" id="final_price" value="<?php echo $product['price']; ?>">
+
+                <label>Quantity:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+
+                <label>Full Name:</label>
+                <input type="text" name="full_name" required placeholder="Enter your full name">
+
+                <label>Email Address:</label>
+                <input type="email" name="email" required placeholder="Enter your email">
+
+                <label>Phone Number:</label>
+                <input type="tel" name="phone" required placeholder="Enter your phone number">
 
                 <label>Shipping Address:</label>
                 <textarea name="address" required placeholder="Enter your full address"></textarea>

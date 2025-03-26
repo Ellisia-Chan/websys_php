@@ -19,9 +19,9 @@ $product_result = $conn->query($product_query);
 $total_products = $product_result->fetch_assoc()['total_products'];
 
 // Fetch Total Orders
-// $order_query = "SELECT COUNT(*) AS total_orders FROM orders";
-// $order_result = $conn->query($order_query);
-// $total_orders = $order_result->fetch_assoc()['total_orders'];
+$order_query = "SELECT COUNT(*) AS total_orders FROM orders";
+$order_result = $conn->query($order_query);
+$total_orders = $order_result->fetch_assoc()['total_orders'];
 
 ?>
 
@@ -52,7 +52,7 @@ $total_products = $product_result->fetch_assoc()['total_products'];
                 <p>Total Products</p>
             </div>
             <div class="analytics-box">
-                <!-- <h2><?php echo $total_orders; ?></h2> -->
+                <h2><?php echo $total_orders; ?></h2>
                 <p>Total Orders</p>
             </div>
         </div>

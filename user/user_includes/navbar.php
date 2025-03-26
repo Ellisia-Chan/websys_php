@@ -12,7 +12,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="index.php">Home</a></li>
         <?php if (isset($_SESSION["user"])): ?>
             <li><a href="my_account.php">My Account</a></li>
-            <li><a href="user_orders.php">Orders</a></li>
+            <li><a href="orders.php">Orders</a></li>
             <li><a href="../logout.php">Logout</a></li>
         <?php else: ?>
             <li><a href="../login.php">Login</a></li>
