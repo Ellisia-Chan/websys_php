@@ -49,6 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include 'includes/navbar.php'; ?>
 
     <div class="form-container">
+        <!-- Back Button at the Top -->
+        <a href="index.php" class="back-btn">⬅</a>
+
         <h2>Login</h2>
 
         <!-- Display Message -->
@@ -59,8 +62,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" name="password" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
+
         <p>Don't have an account? <a href="registration.php">Sign up here</a></p>
     </div>
+
 
     <?php include 'includes/footer.php'; ?>
 

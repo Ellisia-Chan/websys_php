@@ -50,19 +50,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include 'includes/navbar.php'; ?>
 
     <div class="form-container">
-        <h2>Sign Up</h2>
+    <!-- Back Button at the Top Left Inside the Form -->
+    <a href="index.php" class="back-btn">⬅</a>
 
-        <!-- Display Message -->
-        <?php echo $message; ?>
+    <h2>Sign Up</h2>
 
-        <form action="registration.php" method="POST">
-            <input type="text" name="username" placeholder="Username" required><br>
-            <input type="email" name="email" placeholder="Email" required><br>
-            <input type="password" name="password" placeholder="Password" required><br>
-            <button type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="login.php">Login here</a></p>
-    </div>
+    <!-- Display Message -->
+    <?php echo $message; ?>
+
+    <form action="registration.php" method="POST">
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <p>Already have an account? <a href="login.php">Login here</a></p>
+</div>
+
 
     <?php include 'includes/footer.php'; ?>
 

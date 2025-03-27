@@ -10,8 +10,10 @@ body {
     min-height: 100vh;
 }
 
-/* ============= FIXED NAVBAR WITH LOGO & RIGHT-ALIGNED LINKS ============= */
+
 .navbar {
+    position: sticky;
+    top: 0;
     background-color: #ff66b2;
     padding: 15px 20px;
     display: flex;
@@ -21,7 +23,7 @@ body {
 
 /* Logo Styling */
 .navbar .logo img {
-    height: 30px; /* Adjust size as needed */
+    height: 30px;
     width: auto;
 }
 
@@ -59,7 +61,7 @@ body {
     }
 
     .navbar .logo img {
-        height: 40px; /* Smaller logo for mobile */
+        height: 40px;
     }
 
     .navbar .nav-links {
@@ -72,108 +74,168 @@ body {
     }
 }
 
+
 /* Hero Banner */
 .banner img {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
 }
 
-/* Sections */
-.welcome, .about, .featured-products, .reviews, .contact {
+/* ============= WELCOME SECTION ============= */
+.welcome {
     text-align: center;
-    padding: 30px 30px;
-    background: white;
-    margin: 20px auto;
+    padding: 60px 20px;
+    background-color: #fff;
     border-radius: 10px;
-    width: 60%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.welcome h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Styled Buttons for Login & Register */
+.welcome .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.welcome .btn:first-of-type {
+    background-color: #ff66b2;
+}
+
+.welcome .btn:first-of-type:hover {
+    background-color: #e0559e;
+}
+
+.welcome .btn:last-of-type {
+    background-color: #4CAF50;
+}
+
+.welcome .btn:last-of-type:hover {
+    background-color: #3e8e41;
+}
+
+/* ============= ABOUT SECTION ============= */
 .about {
     background-color: #ffccde;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.about p{
-    font-size: 18px;
+.about h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
     padding: 15px;
-    justify-content: center;
     text-align: justify;
-    width: 60%;
+    max-width: 700px;
     margin: auto;
+    color: #444;
 }
-
 
 .about img {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Featured Products */
-.featured-products .product {
-    display: inline-block;
+/* ============= FEATURED PRODUCTS ============= */
+.featured-products {
+    text-align: center;
+    padding: 50px 20px;
     background: white;
-    padding: 15px;
-    margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1100px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.featured-products .product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.featured-products .product {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    width: 250px;
+    text-align: center;
+}
+
+.featured-products .product:hover {
+    transform: scale(1.05);
 }
 
 .featured-products .product img {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Customer Reviews */
-.reviews {
-    background-color: #ffb3d9;
-}
-
-.review {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin: 15px auto;
-    text-align: left;
-    max-width: 600px;
-}
-
-.review img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-/* Contact Section */
-.contact {
-    background-color: #ff99cc;
-    color: white;
-}
-
-.contact img {
     width: 100%;
-    max-width: 400px;
+    height: auto;
     border-radius: 10px;
-    margin-top: 15px;
 }
 
-/* Footer */
+.featured-products .product p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* ============= FOOTER ============= */
 .footer {
     background-color: #ff66b2;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     color: white;
     margin-top: auto;
+    font-size: 1rem;
 }
 
-/* ============= LOGIN & SIGNUP FORM STYLING ============= */
 
-/* Form Container */
+/* ============= LOGIN & SIGNUP FORM STYLING ============= */
 .form-container {
+    position: relative; /* Allows positioning inside */
     width: 100%;
     max-width: 400px;
     padding: 30px;
@@ -184,14 +246,12 @@ body {
     text-align: center;
 }
 
-/* Form Title */
 .form-container h2 {
     color: #ff66b2;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-/* Input Fields */
 .form-container input {
     width: 90%;
     padding: 12px;
@@ -202,7 +262,6 @@ body {
     text-align: center;
 }
 
-/* Buttons */
 .form-container button {
     width: 95%;
     padding: 12px;
@@ -220,12 +279,6 @@ body {
     background-color: #ff3385;
 }
 
-/* Links */
-.form-container p {
-    font-size: 14px;
-    margin-top: 15px;
-}
-
 .form-container a {
     color: #ff66b2;
     text-decoration: none;
@@ -236,28 +289,18 @@ body {
     text-decoration: underline;
 }
 
-/* ============= SUCCESS & ERROR MESSAGES ============= */
-
-/* Success Notification */
-.success {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 15px;
+/* Back Button Positioned at the Top Left Inside the Form */
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 24px;
+    color: #ff66b2; /* Pink Color */
+    text-decoration: none;
     font-weight: bold;
-    border: 1px solid #c3e6cb;
+    transition: 0.3s;
 }
 
-/* Error Notification */
-.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 15px;
-    font-weight: bold;
-    border: 1px solid #f5c6cb;
+.back-btn:hover {
+    color: #e0559e; /* Darker Pink on Hover */
 }
