@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <div class="navbar">
     <!-- Logo -->
     <a href="index.php" class="logo">
-        <img src="logo.png" alt="ShoeStore Logo">
+        <img src="images/logo.png" alt="TreadSpot Logo">
     </a>
 
     <!-- Navigation Links -->

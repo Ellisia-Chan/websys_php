@@ -96,6 +96,7 @@ $result = $conn->query($sql);
                     <th>ID</th>
                     <th>Username</th>
                     <th>Email</th>
+                    <th>password</th>
                     <th>Account Type</th>
                     <th>Actions</th>
                 </tr>
@@ -108,6 +109,7 @@ $result = $conn->query($sql);
                             <td>{$row['id']}</td>
                             <td>{$row['username']}</td>
                             <td>{$row['email']}</td>
+                            <td>{$row['password']}</td>
                             <td>" . ($row['account_type'] == 1 ? 'Admin' : 'User') . "</td>
                             <td>
                                 <a href='manage_user_edit.php?id={$row['id']}' class='edit-btn'>Edit</a>

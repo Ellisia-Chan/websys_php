@@ -21,7 +21,7 @@ body {
 
 /* Logo Styling */
 .navbar .logo img {
-    height: 50px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
     width: auto;
 }
 
@@ -82,17 +82,27 @@ body {
 /* Sections */
 .welcome, .about, .featured-products, .reviews, .contact {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 30px;
     background: white;
     margin: 20px auto;
     border-radius: 10px;
-    width: 80%;
+    width: 60%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .about {
     background-color: #ffccde;
 }
+
+.about p{
+    font-size: 18px;
+    padding: 15px;
+    justify-content: center;
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+}
+
 
 .about img {
     width: 100%;

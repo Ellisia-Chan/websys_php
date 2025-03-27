@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 ?>
 <div class="navbar">
     <a href="index.php" class="logo">
-        <img src="../logo.png" alt="Admin Logo">
+        <img src="../images/logo.png" alt="Admin Logo">
     </a>
 
     <ul class="nav-links">
