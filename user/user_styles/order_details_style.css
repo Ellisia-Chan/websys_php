@@ -138,7 +138,7 @@ body {
 
 /* Logo */
 .navbar .logo img {
-    height: 50px;
+    height: 30px;
     width: auto;
 }
 
@@ -176,7 +176,7 @@ body {
     }
 
     .navbar .logo img {
-        height: 40px;
+        height: 30px;
     }
 
     .navbar .nav-links {
