@@ -32,6 +32,8 @@ $order_result = $conn->query($order_query);
     <?php include 'admin_navbar.php'; ?>
 
     <div class="admin-container">
+        <a href="index.php" class="back-btn">⬅</a>
+
         <h1>Manage Orders</h1>
 
         <!-- ✅ Success Message for Deletion -->

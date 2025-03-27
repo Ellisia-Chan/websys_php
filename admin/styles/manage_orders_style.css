@@ -158,6 +158,7 @@ body {
 
 /* ============= ADMIN DASHBOARD CONTENT ============= */
 .admin-container {
+    position: relative;
     text-align: center;
     padding: 30px;
     background: white;
@@ -394,4 +395,22 @@ th {
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+}
+
+
+/* Back Button Positioned at the Top Left Inside the Form */
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 38px;
+    color: #ff66b2; /* Pink Color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #e0559e; /* Darker Pink on Hover */
+    text-decoration: underline;
 }

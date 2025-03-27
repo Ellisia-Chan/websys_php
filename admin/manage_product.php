@@ -27,6 +27,8 @@ $product_result = $conn->query($product_query);
     <?php include 'admin_navbar.php'; ?>
 
     <div class="admin-container">
+        <a href="index.php" class="back-btn-pink">⬅</a>
+
         <h1>Manage Products</h1>
 
         <!-- Display Message Below "Manage Products" -->

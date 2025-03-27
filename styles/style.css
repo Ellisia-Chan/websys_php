@@ -310,7 +310,7 @@ body {
 }
 
 /* Back Button Positioned at the Top Left Inside the Form */
-.back-btn {
+.back-btn-pink {
     position: absolute;
     top: 10px;
     left: 15px;
@@ -321,7 +321,7 @@ body {
     transition: 0.3s;
 }
 
-.back-btn:hover {
+.back-btn-pink:hover {
     color: #e0559e; /* Darker Pink on Hover */
     text-decoration: underline;
 }

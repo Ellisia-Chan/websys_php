@@ -304,6 +304,7 @@ th {
 
 /* ============= FORM STYLING ============= */
 .form-container {
+    text-align: center;
     max-width: 600px;
     margin: 0 auto;
     padding: 30px;
@@ -379,10 +380,19 @@ textarea {
     background-color: #6c757d;
     color: white;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .secondary-btn:hover {
     background-color: #5a6268;
+}
+
+/* Center buttons inside the form */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px;
 }
 
 /* ============= SUCCESS & ERROR MESSAGES ============= */

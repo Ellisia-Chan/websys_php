@@ -83,8 +83,11 @@ if (!$product) {
                     <textarea name="description" required><?php echo htmlspecialchars($product['description']); ?></textarea>
                 </div>
 
-                <button type="submit" name="update_product" class="btn primary-btn">Update Product</button>
-                <a href="manage_product.php" class="btn secondary-btn">Back to Products</a>
+                
+                <div class="button-container">
+                    <button type="submit" name="update_product" class="btn primary-btn">Save</button>
+                    <a href="manage_product.php" class="btn secondary-btn">Cancel</a>
+                </div>
             </form>
         </div>
     </div>

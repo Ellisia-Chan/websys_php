@@ -67,6 +67,8 @@ $result = $conn->query($sql);
 
 
     <div class="admin-container">
+        <a href="index.php" class="back-btn-pink">⬅</a>
+
         <h1>Manage Users</h1>
 
         <!-- Display Message -->
