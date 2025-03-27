@@ -129,6 +129,8 @@ body {
 
 /* ============= USER NAVBAR ============= */
 .navbar {
+    position: sticky;
+    top: 0;
     background-color: #ff66b2;
     padding: 15px 20px;
     display: flex;
@@ -168,24 +170,43 @@ body {
     border-radius: 5px;
 }
 
-/* Responsive Navbar */
+/* Mobile First - Hide the menu by default */
+.navbar .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
     }
 
-    .navbar .logo img {
-        height: 30px;
+    .navbar .hamburger {
+        display: block; /* Show hamburger menu */
     }
 
     .navbar .nav-links {
-        margin-top: 10px;
+        display: none; /* Hide links initially */
         flex-direction: column;
+        background: #ff66b2;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Show menu when active */
     }
 
     .navbar .nav-links li {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 }
 
@@ -196,4 +217,63 @@ body {
     padding: 15px;
     color: white;
     margin-top: auto;
+}
+
+.delete-btn {
+    background-color: #ff4d4d; /* Red delete button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+
+.confirmation-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    margin: 50px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-container h2 {
+    color: #ff4d4d;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: #999;
 }

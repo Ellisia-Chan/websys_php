@@ -72,6 +72,12 @@ $order = $result->fetch_assoc();
             <p><strong>Email:</strong> <?php echo htmlspecialchars($order['email']); ?></p>
             <p><strong>Phone:</strong> <?php echo htmlspecialchars($order['phone']); ?></p>
             <p><strong>Address:</strong> <?php echo htmlspecialchars($order['shipping_address']); ?></p>
+
+            <div style="text-align: right; margin-top: 20px;">
+                <a href="order_details_confirm_delete.php?id=<?php echo $order['id']; ?>" class="btn delete-btn">🗑️ Delete Order</a>
+            </div>
+
+
         </div>
 
         <div class="button-group">
@@ -83,4 +89,9 @@ $order = $result->fetch_assoc();
     <?php include 'user_includes/footer.php'; ?>
 
 </body>
+<script>
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+    }
+</script>
 </html>

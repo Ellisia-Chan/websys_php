@@ -103,6 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
     <?php include 'user_includes/navbar.php'; ?>
 
     <div class="form-container">
+        <a href="index.php" class="back-btn">⬅</a>
         <h2>My Account</h2>
 
         <?php echo $message; ?>
@@ -128,4 +129,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
     <?php include 'user_includes/footer.php'; ?>
 
 </body>
+<script>
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+    }
+</script>
 </html>

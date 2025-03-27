@@ -111,4 +111,9 @@ if (isset($_SESSION["error_message"])) {
     </script>
 
 </body>
+<script>
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+    }
+</script>
 </html>

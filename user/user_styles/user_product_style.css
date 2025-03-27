@@ -238,6 +238,8 @@ body {
 
 /* ============= USER NAVBAR ============= */
 .navbar {
+    position: sticky;
+    top: 0;
     background-color: #ff66b2;
     padding: 15px 20px;
     display: flex;
@@ -275,6 +277,46 @@ body {
 .navbar .nav-links a:hover {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
+}
+
+/* Mobile First - Hide the menu by default */
+.navbar .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .navbar .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        background: #ff66b2;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar .nav-links li {
+        margin: 15px 0;
+    }
 }
 
 /* ============= FOOTER ============= */

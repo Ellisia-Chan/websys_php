@@ -12,11 +12,14 @@ body {
 
 /* ============= NAVBAR ============= */
 .navbar {
+    position: sticky;
+    top: 0;
     background-color: #ff66b2;
     padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
 }
 
 .navbar .logo img {
@@ -49,6 +52,46 @@ body {
     border-radius: 5px;
 }
 
+/* Mobile First - Hide the menu by default */
+.navbar .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .navbar .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        background: #ff66b2;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar .nav-links li {
+        margin: 15px 0;
+    }
+}
+
 /* ============= FOOTER ============= */
 .footer {
     background-color: #ff66b2;
@@ -60,35 +103,37 @@ body {
 
 /* ============= MY ACCOUNT PAGE STYLES ============= */
 .form-container {
-    width: 600px; /* Larger fixed width */
-    margin: 50px auto; /* More vertical spacing */
-    padding: 40px;
+    width: 90%; /* Use a percentage width for responsiveness */
+    max-width: 600px; /* Keep it large on big screens */
+    margin: 50px auto;
+    padding: 30px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .form-container h2 {
     color: #ff66b2;
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 28px;
+    margin-bottom: 25px;
+    font-size: 24px;
 }
 
 .form-container label {
     display: block;
-    margin: 20px 0 10px;
+    margin: 15px 0 8px;
     color: #333;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .form-container input {
     width: 100%;
-    padding: 12px 15px;
+    padding: 12px;
     border: 2px solid #ddd;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
@@ -97,24 +142,62 @@ body {
     color: #777;
 }
 
+/* Button Styling */
+.form-container form {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .form-container button {
-    display: inline-block;
-    width: 48%;
-    padding: 15px;
-    margin-top: 30px;
+    flex: 1; /* Makes buttons flexible */
+    padding: 12px;
+    margin: 10px 5px;
     background-color: #ff66b2;
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    min-width: 140px; /* Prevents buttons from becoming too small */
 }
 
 .form-container button:hover {
     background-color: #ff3385;
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 22px;
+    }
+
+    .form-container label {
+        font-size: 14px;
+    }
+
+    .form-container input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-container form {
+        flex-direction: column;
+    }
+
+    .form-container button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
 
 /* Side-by-side buttons */
 .form-container form {
@@ -148,4 +231,22 @@ body {
     margin-bottom: 30px;
     border: 1px solid #c3e6cb;
     font-size: 16px;
+}
+
+/* Back Button Positioned at the Top Left Inside the Form */
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 34px;
+    color: #ff66b2; /* Pink Color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #e0559e; /* Darker Pink on Hover */
+    text-decoration: underline;
+
 }

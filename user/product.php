@@ -99,4 +99,9 @@ $related_result = $related_stmt->get_result();
     <?php include 'user_includes/footer.php'; ?>
 
 </body>
+<script>
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+    }
+</script>
 </html>

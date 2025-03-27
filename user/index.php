@@ -46,4 +46,9 @@ session_start();
     <?php include 'user_includes/footer.php'; ?>
 
 </body>
+<script>
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+    }
+</script>
 </html>
