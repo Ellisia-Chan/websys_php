@@ -11,33 +11,48 @@ body {
 }
 
 /* ============= ADMIN NAVBAR ============= */
+/* ============= GENERAL ADMIN STYLES ============= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ============= ADMIN NAVBAR ============= */
 .navbar {
+    position: sticky;
+    top: 0;
     background-color: #ff66b2;
     padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
 }
 
-/* Admin Logo */
 .navbar .logo img {
     height: 30px;
     width: auto;
 }
 
 /* Navigation Links */
-.navbar .nav-links {
+.nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-.navbar .nav-links li {
+.nav-links li {
     margin-left: 20px;
 }
 
-.navbar .nav-links a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -46,9 +61,234 @@ body {
     transition: 0.3s;
 }
 
-.navbar .nav-links a:hover {
+.nav-links a:hover {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ============= ADMIN DASHBOARD CONTENT ============= */
+.admin-container {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= INLINE ANALYTICS ============= */
+.admin-analytics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.analytics-box {
+    background-color: #ff66b2;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ============= MANAGEMENT BUTTONS ============= */
+.admin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff66b2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff3385;
+}
+
+/* Logout Button */
+.btn.logout {
+    background-color: #d9534f;
+}
+
+.btn.logout:hover {
+    background-color: #c9302c;
+}
+
+/* ============= FORM STYLING ============= */
+.form-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Update & Back Buttons */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #ff66b2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #ff3385;
+}
+
+/* ============= TABLE STYLING ============= */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #ff66b2;
+    color: white;
+}
+
+/* ============= RESPONSIVE STYLES ============= */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar .logo img {
+        height: 35px;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #ff66b2;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Adjust Admin Dashboard */
+    .admin-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .admin-analytics {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .analytics-box {
+        width: 80%;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Forms */
+    .form-container {
+        width: 90%;
+    }
+
+    .form-container input,
+    .form-container select {
+        width: 100%;
+    }
+
+    /* Tables */
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .edit-btn, .delete-btn {
+        display: block;
+        margin: 5px auto;
+    }
 }
 
 /* ============= ADMIN CONTAINER ============= */

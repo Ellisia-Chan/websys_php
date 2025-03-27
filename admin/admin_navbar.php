@@ -8,6 +8,9 @@ if (session_status() == PHP_SESSION_NONE) {
         <img src="../images/logo.png" alt="Admin Logo">
     </a>
 
+    <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
     <ul class="nav-links">
         <li><a href="index.php">Dashboard</a></li>
         <li><a href="manage_users.php">Users</a></li>
@@ -16,3 +19,9 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="../logout.php">Logout</a></li>
     </ul>
 </div>
+
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>

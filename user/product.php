@@ -45,6 +45,8 @@ $related_result = $related_stmt->get_result();
     <?php include 'user_includes/navbar.php'; ?>
 
     <div class="product-page-container">
+        <a href="index.php" class="back-btn">⬅</a>
+
         <div class="product-details">
             <img src="../uploads/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
             <div class="product-info">

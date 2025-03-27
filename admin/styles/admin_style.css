@@ -11,33 +11,37 @@ body {
 }
 
 /* ============= ADMIN NAVBAR ============= */
+/* General Navbar Styling */
 .navbar {
+    position: sticky;
+    top: 0;
     background-color: #ff66b2;
     padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000; /* Keep navbar above everything */
 }
 
-/* Admin Logo */
+/* Logo */
 .navbar .logo img {
     height: 30px;
     width: auto;
 }
 
 /* Navigation Links */
-.navbar .nav-links {
+.nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-.navbar .nav-links li {
+.nav-links li {
     margin-left: 20px;
 }
 
-.navbar .nav-links a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -46,10 +50,46 @@ body {
     transition: 0.3s;
 }
 
-.navbar .nav-links a:hover {
+.nav-links a:hover {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
 }
+
+/* Hamburger Button (Hidden by Default) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        background: #ff66b2;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
 
 /* ============= ADMIN DASHBOARD CONTENT ============= */
 .admin-container {
@@ -68,6 +108,7 @@ body {
     justify-content: space-around;
     margin-top: 20px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .analytics-box h2 {

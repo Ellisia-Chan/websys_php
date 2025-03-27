@@ -37,6 +37,8 @@ $result = $stmt->get_result();
     <?php include 'user_includes/navbar.php'; ?>
 
     <div class="orders-container">
+        <a href="index.php" class="back-btn">⬅</a>
+
         <h1>📦 My Orders</h1>
 
         <?php if ($result->num_rows > 0) : ?>
