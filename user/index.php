@@ -19,12 +19,14 @@ session_start();
         <h1>Welcome to Shoe Store</h1>
         <p>Find the best and trendiest shoes at unbeatable prices!</p>
 
-        <div class="product-grid">
-            <?php
-            // Fetch products from database
-            $sql = "SELECT * FROM products ORDER BY id DESC";
-            $result = $conn->query($sql);
+        <?php
+        $sql = "SELECT * FROM products ORDER BY id DESC";
+        $result = $conn->query($sql);
+        $grid_class = ($result->num_rows > 0) ? "grid-4" : "grid-1";
+        ?>
 
+        <div class="product-grid <?php echo $grid_class; ?>">
+            <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "
@@ -38,7 +40,6 @@ session_start();
             } else {
                 echo "<div class='no-products'>No products available.</div>";
             }
-            
             ?>
         </div>
     </div>
