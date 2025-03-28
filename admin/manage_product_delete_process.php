@@ -39,6 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_product"])) {
         unlink($image_path);
     }
 
+    // Delete related orders from the database
+    $delete_orders_query = "DELETE FROM orders WHERE product_id = ?";
+    $stmt = $conn->prepare($delete_orders_query);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+
     // Delete the product from the database
     $delete_query = "DELETE FROM products WHERE id = ?";
     $stmt = $conn->prepare($delete_query);

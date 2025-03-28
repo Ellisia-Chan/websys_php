@@ -36,16 +36,22 @@
         <h2>Featured Products</h2>
         <div class="product-container">
             <div class="product">
-                <img src="images/shoe_images/Shoes/ShoeBrands/Nike/JA 2 'Heart Eyes' EP.png" alt="Shoe 1">
-                <p>JA 2 'Heart Eyes' EP<br>$49.99</p>
+                <a href="login.php">
+                    <img src="images/shoe_images/Shoes/ShoeBrands/Nike/JA 2 'Heart Eyes' EP.png" alt="Shoe 1">
+                    <p>JA 2 'Heart Eyes' EP<br>$49.99</p>
+                </a>
             </div>
             <div class="product">
-                <img src="images/shoe_images/Shoes/ShoeBrands/Adidas/Adizero SL2 Running Shoes.png" alt="Shoe 2">
-                <p>Adizero SL2<br>$39.99</p>
+                <a href="login.php">
+                    <img src="images/shoe_images/Shoes/ShoeBrands/Adidas/Adizero SL2 Running Shoes.png" alt="Shoe 2">
+                    <p>Adizero SL2<br>$39.99</p>
+                </a>
             </div>
             <div class="product">
-                <img src="images/shoe_images/Shoes/ShoeBrands/Puma/Electrify NITRO 4.png" alt="Shoe 3">
-                <p>Electrify NITRO 4<br>$59.99</p>
+                <a href="login.php">
+                    <img src="images/shoe_images/Shoes/ShoeBrands/Puma/Electrify NITRO 4.png" alt="Shoe 3">
+                    <p>Electrify NITRO 4<br>$59.99</p>
+                </a>
             </div>
         </div>
     </div>

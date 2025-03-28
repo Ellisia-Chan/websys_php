@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         exit();
     } else {
-        $message = "<div class='error'>⚠️ Incorrect username or password.</div>";
+        $message = "<div class='message-container error'>⚠️ Incorrect username or password.</div>";
     }
 }
 ?>

@@ -12,16 +12,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Basic form validation
     if (empty($username) || empty($email) || empty($password)) {
-        $message = "<div class='error'>⚠️ All fields are required.</div>";
+        $message = "<div class='message-container error'>⚠️ All fields are required.</div>";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $message = "<div class='error'>⚠️ Invalid email format.</div>";
+        $message = "<div class='message-container error'>⚠️ Invalid email format.</div>";
     } else {
         // Check if the username or email already exists
         $check_sql = "SELECT * FROM users WHERE username='$username' OR email='$email'";
         $result = $conn->query($check_sql);
 
         if ($result->num_rows > 0) {
-            $message = "<div class='error'>⚠️ Username or email already exists.</div>";
+            $message = "<div class='message-container error'>⚠️ Username or email already exists.</div>";
         } else {
             // Insert user with a plain text password
             $sql = "INSERT INTO users (username, email, password, account_type) 
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($conn->query($sql) === TRUE) {
                 $message = "<div class='success'>✅ Registration successful! <a href='login.php'>Login here</a></div>";
             } else {
-                $message = "<div class='error'>⚠️ Something went wrong. Please try again.</div>";
+                $message = "<div class='message-container error'>⚠️ Something went wrong. Please try again.</div>";
             }
         }
     }
