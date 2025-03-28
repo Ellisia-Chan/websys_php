@@ -55,6 +55,7 @@ $related_result = $related_stmt->get_result();
                 <p><?php echo htmlspecialchars($product['description']); ?></p>
                 <!-- Updated Buy Button with link to buy.php -->
                 <a href="buy.php?id=<?php echo $product_id; ?>" class="buy-btn">Buy Now</a>
+                <a href="" class="buy-btn">Add to Cart</a>
             </div>
         </div>
 

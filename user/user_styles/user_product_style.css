@@ -36,7 +36,7 @@ body {
 /* Product Image */
 .product-details img {
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -86,6 +86,27 @@ body {
 }
 
 .buy-btn:hover {
+    background-color: #ff3385;
+    transform: scale(1.05);
+}
+
+/* Buy Button */
+.cart-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #534f52;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.cart-btn:hover {
     background-color: #ff3385;
     transform: scale(1.05);
 }

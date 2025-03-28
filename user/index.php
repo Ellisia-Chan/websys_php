@@ -15,9 +15,14 @@ session_start();
 
     <?php include 'user_includes/navbar.php'; ?>
 
+        <!-- Hero Banner -->
+    <div class="banner">
+        <img src="../images/Shoes_img_1.jpg" alt="Shoe Store Banner">
+    </div>
+
     <div class="homepage-container">
-        <h1>Welcome to Shoe Store</h1>
-        <p>Find the best and trendiest shoes at unbeatable prices!</p>
+        <h1>Welcome to TreadSpot</h1>
+        <p>Find the best and trendiest shoes at the best prices.</p>
 
         <?php
         $sql = "SELECT * FROM products ORDER BY id DESC";

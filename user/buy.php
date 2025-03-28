@@ -45,6 +45,8 @@ if (isset($_SESSION["error_message"])) {
     <?php include 'user_includes/navbar.php'; ?>
 
     <div class="checkout-container">
+
+        <a href="index.php" class="back-btn">⬅</a>
         <h1>Checkout</h1>
 
         <!-- Error Message Display -->

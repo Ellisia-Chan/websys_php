@@ -12,6 +12,7 @@ body {
 
 /* Checkout Container */
 .checkout-container {
+    position: relative;
     width: 90%;
     max-width: 800px;
     margin: 40px auto;
@@ -265,4 +266,22 @@ input[type="number"] {
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
+}
+
+/* Back Button Positioned at the Top Left Inside the Form */
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 34px;
+    color: #ff66b2; /* Pink Color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #e0559e; /* Darker Pink on Hover */
+    text-decoration: underline;
+
 }
