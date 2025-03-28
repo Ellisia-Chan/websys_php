@@ -188,6 +188,13 @@ body {
     font-weight: bold;
 }
 
+.single-grid {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+}
+
 /* View Details Button */
 .product-card .btn {
     display: inline-block;

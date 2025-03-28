@@ -78,13 +78,14 @@ $related_result = $related_stmt->get_result();
         <!-- Related Products Section -->
         <div class="related-products">
             <h2>Related Products</h2>
-            <div class="product-grid">
+            <?php $gridClass = $related_result->num_rows === 0 ? 'single-grid' : ''; ?>
+            <div class="product-grid <?php echo $gridClass; ?>">
                 <?php
                 if ($related_result->num_rows > 0) {
                     while ($related = $related_result->fetch_assoc()) {
                         echo "
                         <div class='product-card'>
-                            <img src='../uploads/" . $related['image'] . "' alt='" . $related['name'] . "'>
+                            <img src='../uploads/" . $related['image'] . "' alt='" . htmlspecialchars($related['name']) . "'>
                             <h3>" . htmlspecialchars($related['name']) . "</h3>
                             <p>$" . number_format($related['price'], 2) . "</p>
                             <a href='product.php?id=" . $related['id'] . "' class='btn'>View Details</a>
