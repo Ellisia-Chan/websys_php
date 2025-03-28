@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="form-container">
     <!-- Back Button at the Top Left Inside the Form -->
-    <a href="index.php" class="back-btn">⬅</a>
+    <a href="index.php" class="back-btn-pink">⬅</a>
 
     <h2>Sign Up</h2>
 
