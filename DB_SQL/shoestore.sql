@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2025 at 02:57 PM
+-- Generation Time: Mar 28, 2025 at 02:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -46,7 +46,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `product_id`, `full_name`, `email`, `phone`, `quantity`, `total_price`, `payment_method`, `shipping_address`, `order_date`) VALUES
-(15, 16, 24, 'ely', 'ely@ely.com', '1231231313', 1, 10.00, 'GCash', 'asdfasdfasdfsdf', '2025-03-26 13:42:03');
+(19, 16, 26, 'sfsafasf', 'kamiyon@kamiyon.com', '1231231313', 1, 10.00, 'Shop Voucher', 'asfasfd', '2025-03-28 12:53:39');
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `created_at`) VALUES
-(24, 'asdfasdf', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 10.00, '1742994847_KAWHI IV.png', '2025-03-26 13:14:07');
+(26, 'asdf', 'asdfasfd', 10.00, '1743166102_9060.png', '2025-03-28 12:48:22'),
+(27, 'MAIN', 'Description', 100.00, '1743166463_Fresh Foam X 1080v14.png', '2025-03-28 12:54:23');
 
 -- --------------------------------------------------------
 
@@ -89,7 +90,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `account_type`) VALUES
-(10, 'admin', 'admin123456', 'admin@admin.com', 1),
+(10, 'admin', '123456', 'admin@admin.com', 1),
 (16, 'elysia', '123456', 'kamiyon1234@kamiyon.com', 2);
 
 --
@@ -125,13 +126,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
