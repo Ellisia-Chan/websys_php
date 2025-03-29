@@ -43,9 +43,25 @@ $related_result = $related_stmt->get_result();
 <body>
 
     <?php include 'user_includes/navbar.php'; ?>
-
     <div class="product-page-container">
         <a href="index.php" class="back-btn">⬅</a>
+
+        <?php
+        if (isset($_GET['status'])) {
+            $status = $_GET['status'];
+            $message = '';
+
+            if ($status === 'added') {
+                $message = 'Product successfully added to your cart!';
+            } elseif ($status === 'exists') {
+                $message = 'This product is already in your cart.';
+            }
+
+            if ($message) {
+                echo "<div class='cart-message'>$message</div>";
+            }
+        }
+        ?>
 
         <div class="product-details">
             <img src="../uploads/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
@@ -55,7 +71,7 @@ $related_result = $related_stmt->get_result();
                 <p><?php echo htmlspecialchars($product['description']); ?></p>
                 <!-- Updated Buy Button with link to buy.php -->
                 <a href="buy.php?id=<?php echo $product_id; ?>" class="buy-btn">Buy Now</a>
-                <a href="" class="buy-btn">Add to Cart</a>
+                <a href="add_to_cart.php?id=<?php echo $product_id; ?>&return=product" class="cart-btn">Add to Cart</a>
             </div>
         </div>
 

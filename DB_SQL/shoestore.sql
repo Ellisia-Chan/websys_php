@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2025 at 02:06 PM
+-- Generation Time: Mar 29, 2025 at 02:17 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `shoestore`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) DEFAULT 1,
+  `added_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -46,7 +60,9 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `product_id`, `full_name`, `email`, `phone`, `quantity`, `total_price`, `payment_method`, `shipping_address`, `order_date`) VALUES
-(19, 16, 26, 'sfsafasf', 'kamiyon@kamiyon.com', '1231231313', 1, 10.00, 'Shop Voucher', 'asfasfd', '2025-03-28 12:53:39');
+(19, 16, 26, 'sfsafasf', 'kamiyon@kamiyon.com', '1231231313', 1, 10.00, 'Shop Voucher', 'asfasfd', '2025-03-28 12:53:39'),
+(20, 16, 26, 'ely', 'kamiyon1234@kamiyon.com', '1231231313', 1, 10.00, 'COD', 'sadfasfasfd', '2025-03-29 13:15:50'),
+(21, 16, 27, 'ely', 'ely@ely.com', '1231231313', 1, 100.00, 'COD', 'safasfasf', '2025-03-29 13:16:22');
 
 -- --------------------------------------------------------
 
@@ -98,6 +114,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `account_type`) VALU
 --
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -123,10 +145,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `products`

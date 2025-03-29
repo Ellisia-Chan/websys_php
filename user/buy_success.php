@@ -33,7 +33,7 @@ $product_image = ($product) ? "../uploads/" . $product["image"] : "../uploads/sh
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Successful - Shoe Store</title>
+    <title>Order Successful - TreadSpot</title>
     <link rel="stylesheet" href="user_styles/buy_success.css">
 </head>
 <body>

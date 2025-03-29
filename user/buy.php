@@ -37,7 +37,7 @@ if (isset($_SESSION["error_message"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Shoe Store</title>
+    <title>Checkout - TreadSpot</title>
     <link rel="stylesheet" href="user_styles/buy_style.css">
 </head>
 <body>

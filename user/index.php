@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Shoe Store</title>
+    <title>Home - TreadSpot</title>
     <link rel="stylesheet" href="user_styles/user_style.css">
 </head>
 <body>

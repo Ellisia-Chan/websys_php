@@ -29,7 +29,7 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Orders - Shoe Store</title>
+    <title>My Orders - TreadSpot</title>
     <link rel="stylesheet" href="user_styles/orders_style.css"> <!-- Separate CSS file -->
 </head>
 <body>

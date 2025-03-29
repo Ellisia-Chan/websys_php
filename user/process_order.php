@@ -57,6 +57,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("iisssidss", $_SESSION["user_id"], $product_id, $full_name, $email, $phone, $quantity, $total_price, $payment_method, $shipping_address);
 
     if ($stmt->execute()) {
+        // Delete product from cart (if it exists)
+        $sql = "DELETE FROM cart WHERE user_id = ? AND product_id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ii", $_SESSION["user_id"], $product_id);
+        $stmt->execute();
+
         // Store order details in session for confirmation page
         $_SESSION["success_message"] = "Thank you, $full_name! Your order has been placed successfully.";
         $_SESSION["payment_method"] = $payment_method;
@@ -75,3 +81,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 ?>
+

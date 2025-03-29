@@ -44,7 +44,7 @@ $order = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Details - Shoe Store</title>
+    <title>Order Details - TreadSpot</title>
     <link rel="stylesheet" href="user_styles/order_details_style.css"> <!-- Separate CSS file -->
 </head>
 <body>
