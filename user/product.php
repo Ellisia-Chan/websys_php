@@ -79,15 +79,15 @@ $related_result = $related_stmt->get_result();
         <div class="reviews">
             <h2>Customer Reviews</h2>
             <div class="review">
-                <img src="../uploads/user1.jpg" alt="User 1">
+                <img src="../images/reviews/client-img1.png" alt="User 1">
                 <p><strong>John Doe:</strong> Amazing quality! Worth every penny! ⭐⭐⭐⭐⭐</p>
             </div>
             <div class="review">
-                <img src="../uploads/user2.jpg" alt="User 2">
+                <img src="../images/reviews/client-img2.png" alt="User 2">
                 <p><strong>Jane Smith:</strong> Super comfortable shoes, fast shipping! ⭐⭐⭐⭐⭐</p>
             </div>
             <div class="review">
-                <img src="../uploads/user3.jpg" alt="User 3">
+                <img src="../images/reviews/client-img3.png" alt="User 3">
                 <p><strong>Emily Johnson:</strong> Love the style, will buy again! ⭐⭐⭐⭐☆</p>
             </div>
         </div>
