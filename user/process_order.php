@@ -49,12 +49,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Calculate total price
     $total_price = $price * $quantity;
 
-    // Insert order into database (Without `status` Column)
-    $sql = "INSERT INTO orders (user_id, product_id, full_name, email, phone, quantity, total_price, payment_method, shipping_address) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    // Insert order into database
+    $sql = "INSERT INTO orders (user_id, product_id, full_name, email, phone, quantity, total_price, payment_method, shipping_address, status) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("iisssidss", $_SESSION["user_id"], $product_id, $full_name, $email, $phone, $quantity, $total_price, $payment_method, $shipping_address);
+    $status = "Pending";
+    $stmt->bind_param("iisssdssss", $_SESSION["user_id"], $product_id, $full_name, $email, $phone, $quantity, $total_price, $payment_method, $shipping_address, $status);
 
     if ($stmt->execute()) {
         // Delete product from cart (if it exists)

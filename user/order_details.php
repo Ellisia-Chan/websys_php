@@ -21,7 +21,7 @@ $order_id = $_GET['id'];
 // Fetch order details
 $sql = "SELECT orders.id, orders.quantity, orders.total_price, orders.payment_method, 
                orders.shipping_address, orders.full_name, orders.email, orders.phone, orders.order_date, 
-               products.name AS product_name, products.image 
+               orders.status, products.name AS product_name, products.image 
         FROM orders 
         JOIN products ON orders.product_id = products.id 
         WHERE orders.id = ? AND orders.user_id = ?";
@@ -63,6 +63,7 @@ $order = $result->fetch_assoc();
                 <p><strong>Quantity:</strong> <?php echo $order['quantity']; ?></p>
                 <p><strong>Total Price:</strong> $<?php echo number_format($order['total_price'], 2); ?></p>
                 <p><strong>Payment Method:</strong> <?php echo $order['payment_method']; ?></p>
+                <p><strong>Status:</strong> <?php echo $order['status']; ?></p>
             </div>
         </div>
 

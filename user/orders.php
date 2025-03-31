@@ -11,7 +11,7 @@ if (!isset($_SESSION["user_id"])) {
 $user_id = $_SESSION["user_id"];
 
 // Fetch user orders
-$sql = "SELECT orders.id, orders.quantity, orders.total_price, orders.payment_method, 
+$sql = "SELECT orders.id, orders.quantity, orders.total_price, orders.payment_method, orders.status,
                products.name AS product_name, products.image 
         FROM orders 
         JOIN products ON orders.product_id = products.id 
@@ -51,6 +51,7 @@ $result = $stmt->get_result();
                             <p><strong>Quantity:</strong> <?php echo $order['quantity']; ?></p>
                             <p><strong>Total Price:</strong> $<?php echo number_format($order['total_price'], 2); ?></p>
                             <p><strong>Payment:</strong> <?php echo $order['payment_method']; ?></p>
+                            <p><strong>Status:</strong> <?php echo $order['status']; ?></p>
                             <a href="order_details.php?id=<?php echo $order['id']; ?>" class="btn">View Details</a>
                         </div>
                     </div>

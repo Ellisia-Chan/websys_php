@@ -18,18 +18,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-        // Store user info in session
-        $_SESSION["user_id"] = $user["id"];  // ✅ Store user ID in session
-        $_SESSION["user"] = $user["username"];
-        $_SESSION["account_type"] = $user["account_type"];
+        // Validate password (plain text)
+        if ($password === $user["password"]) {
+            // Store user info in session
+            $_SESSION["user_id"] = $user["id"];
+            $_SESSION["user"] = $user["username"];
+            $_SESSION["account_type"] = $user["account_type"];
 
-        // Redirect based on account type
-        if ($user["account_type"] == 1) {
-            header("Location: admin"); // Admin Redirect
+            // Redirect based on account type
+            if ($user["account_type"] == 1) {
+                header("Location: admin"); // Admin Redirect
+            } else {
+                header("Location: user"); // User Redirect
+            }
+            exit();
         } else {
-            header("Location: user"); // User Redirect
+            $message = "<div class='message-container error'>⚠️ Incorrect username or password.</div>";
         }
-        exit();
     } else {
         $message = "<div class='message-container error'>⚠️ Incorrect username or password.</div>";
     }
