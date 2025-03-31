@@ -414,3 +414,19 @@ th {
     color: #e0559e; /* Darker Pink on Hover */
     text-decoration: underline;
 }
+
+
+.status-dropdown {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.status-dropdown:hover {
+    background-color: #f2f2f2;
+}

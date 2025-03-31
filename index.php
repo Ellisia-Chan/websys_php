@@ -37,7 +37,7 @@
         <div class="product-container">
             <div class="product">
                 <a href="login.php">
-                    <img src="images/shoe_images/Shoes/ShoeBrands/Nike/JA 2 'Heart Eyes' EP.png" alt="Shoe 1">
+                    <img src="images/shoe_images/Shoes/ShoeBrands/Nike/JA 2 Heart Eyes EP.png" alt="Shoe 1">
                     <p>JA 2 'Heart Eyes' EP<br>$49.99</p>
                 </a>
             </div>
