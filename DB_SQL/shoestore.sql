@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2025 at 02:53 PM
+-- Generation Time: Mar 31, 2025 at 02:55 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -52,8 +52,17 @@ CREATE TABLE `orders` (
   `total_price` decimal(10,2) NOT NULL,
   `payment_method` enum('COD','GCash','Credit Card','Shop Voucher') NOT NULL,
   `shipping_address` text NOT NULL,
-  `order_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `order_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `product_id`, `full_name`, `email`, `phone`, `quantity`, `total_price`, `payment_method`, `shipping_address`, `order_date`, `status`) VALUES
+(23, 16, 40, 'ely', 'ely@ely.com', '1231231313', 1, 104.99, 'GCash', 'san', '2025-03-31 12:26:55', 'Pending'),
+(24, 16, 38, 'ely', 'ely@ely.com', '12345678901', 1, 166.99, 'COD', 'asdfasfasf', '2025-03-31 12:36:54', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -109,7 +118,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `account_type`) VALUES
 (10, 'admin', '123456', 'admin@admin.com', 1),
-(16, 'elysia', '123456', 'kamiyon1234@kamiyon.com', 2);
+(16, 'elysia', '123456', 'kamiyon1234@kamiyon.com', 2),
+(18, 'Ren', '1234567890', 'ren@ren.com', 2);
 
 --
 -- Indexes for dumped tables
@@ -150,13 +160,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -168,7 +178,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables
